@@ -1,0 +1,43 @@
+*** Settings ***
+Library         OperatingSystem
+Library         SeleniumLibrary                 implicit_wait=2
+Resource        ../Functions/Functions.robot
+Test Teardown    Close All Browsers
+
+
+*** Variables ***
+
+*** Test Cases ***
+Example
+    Openwebbrowser  
+    Wait Until Element Is Visible                   //input[@class="gwt-TextBox required"]
+    Click Element                                   //input[@class="gwt-TextBox required"]
+    Input Text                                      //input[@class="gwt-TextBox required"]          Josua Simanjuntak
+    Click Element                                   (//tr//input[@class="gwt-TextBox"])[1]          
+    Input Text                                      (//tr//input[@class="gwt-TextBox"])[1]          Abc Company
+    Click Element                                   (//tr//input[@class="gwt-TextBox"])[2]          
+    Input Text                                      (//tr//input[@class="gwt-TextBox"])[2]          Title Abc
+    Click ELement                                   (//tr//input[@class="gwt-TextBox"])[3]
+    Input Text                                      (//tr//input[@class="gwt-TextBox"])[3]          089988665522
+    Click Element                                   (//tr//input[@class="gwt-TextBox"])[4]
+    Input Text                                      (//tr//input[@class="gwt-TextBox"])[4]          josua@gmail.com
+    Click Element                                   (//tr//input[@class="gwt-TextBox"])[5]          
+    Input Text                                      (//tr//input[@class="gwt-TextBox"])[5]          Jalan Lintas Sumatera
+    Click Element                                   (//tr//input[@class="gwt-TextBox"])[7]          
+    Input Text                                      (//tr//input[@class="gwt-TextBox"])[7]          www.gmail.com
+    Click Element                                   //button[@class="gwt-Button"]
+    Wait Until Element Is Visible                   //img[@class="gwt-Image"]                       timeout=30s
+    Click Link                                      css:[href="https://zxing.org/w/chart?cht=qr&chs=350x350&chld=L&choe=UTF-8&chl=MECARD%3AN%3AJosua+Simanjuntak%3BORG%3AAbc+Company%3BTEL%3A089988665522%3BURL%3Awww.gmail.com%3BEMAIL%3Ajosua%40gmail.com%3BADR%3AJalan+Lintas+Sumatera%3BNOTE%3ATitle+Abc%3B%3B"]
+    Capture Element Screenshot                     //img[@src="https://zxing.org/w/chart?cht=qr&chs=350x350&chld=L&choe=UTF-8&chl=MECARD%3AN%3AJosua+Simanjuntak%3BORG%3AAbc+Company%3BTEL%3A089988665522%3BURL%3Awww.gmail.com%3BEMAIL%3Ajosua%40gmail.com%3BADR%3AJalan+Lintas+Sumatera%3BNOTE%3ATitle+Abc%3B%3B"]    D:\\Selenium-Python\\Resources\\barcode-josua.png                      
+    Sleep                                           3s
+    Go to                                           https://m28dev.github.io/qrdecoder/
+    Wait Until Element Is Visible                   //input[@id="qrcode"]
+    Choose File                                     //input[@id="qrcode"]                           D:\\Selenium-Python\\Resources\\barcode-josua.png 
+    Click Element                                   //button[contains(.,"Submit")]
+    Wait Until Element Is Not Visible               //textarea[@id="decoded"][contains(.,"Now Loading...")]                     timeout=60s
+    ${description}                                  Get Text                                        //textarea[@id="decoded"]
+    Log                                             ${description}
+    Sleep               5s
+
+   Remove Files            D:\\Selenium-Python\\Resources\\barcode-josua.png
+

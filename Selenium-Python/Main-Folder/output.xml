@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20230623 12:41:57.265" rpa="false" schemaversion="2">
+<suite id="s1" name="Automation-Selenium-Python" source="D:\Selenium-Python\Main-Folder\Automation-Selenium-Python">
+<test id="s1-t1" name="Example">
+<kw name="OpenWebBrowser" library="Functions">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${WebBrowser}' in ['Chrome','firefox']</arg>
+<arg>Open Browser</arg>
+<arg>${HomePage}</arg>
+<arg>${WebBrowser}</arg>
+<arg>options=add_argument( "${HeadStatus}"); add_argument( "${WindowSize}" )</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${HomePage}</arg>
+<arg>${WebBrowser}</arg>
+<arg>options=add_argument( "${HeadStatus}"); add_argument( "${WindowSize}" )</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230623 12:41:57.618" level="INFO">Opening browser 'Chrome' to base url 'https://zxing.appspot.com/generator/'.</msg>
+<status status="PASS" starttime="20230623 12:41:57.618" endtime="20230623 12:42:01.866"/>
+</kw>
+<status status="PASS" starttime="20230623 12:41:57.617" endtime="20230623 12:42:01.867"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${WebBrowser}' in ['edge','safari','Opera']</arg>
+<arg>Open Browser</arg>
+<arg>${HomePage}</arg>
+<arg>${WebBrowser}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230623 12:42:01.867" endtime="20230623 12:42:01.869"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230623 12:42:01.869" endtime="20230623 12:42:01.997"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Opened the browser successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230623 12:42:01.998" level="INFO">Opened the browser successfully</msg>
+<status status="PASS" starttime="20230623 12:42:01.997" endtime="20230623 12:42:01.998"/>
+</kw>
+<status status="PASS" starttime="20230623 12:41:57.617" endtime="20230623 12:42:01.998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@class="gwt-TextBox required"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 12:42:01.999" endtime="20230623 12:42:02.040"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@class="gwt-TextBox required"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.041" level="INFO">Clicking element '//input[@class="gwt-TextBox required"]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.041" endtime="20230623 12:42:02.127"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@class="gwt-TextBox required"]</arg>
+<arg>Josua Simanjuntak</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.128" level="INFO">Typing text 'Josua Simanjuntak' into text field '//input[@class="gwt-TextBox required"]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.128" endtime="20230623 12:42:02.229"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.230" level="INFO">Clicking element '(//tr//input[@class="gwt-TextBox"])[1]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.229" endtime="20230623 12:42:02.290"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[1]</arg>
+<arg>Abc Company</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.292" level="INFO">Typing text 'Abc Company' into text field '(//tr//input[@class="gwt-TextBox"])[1]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.291" endtime="20230623 12:42:02.378"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.379" level="INFO">Clicking element '(//tr//input[@class="gwt-TextBox"])[2]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.379" endtime="20230623 12:42:02.435"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[2]</arg>
+<arg>Title Abc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.437" level="INFO">Typing text 'Title Abc' into text field '(//tr//input[@class="gwt-TextBox"])[2]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.436" endtime="20230623 12:42:02.516"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.517" level="INFO">Clicking element '(//tr//input[@class="gwt-TextBox"])[3]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.516" endtime="20230623 12:42:02.575"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[3]</arg>
+<arg>089988665522</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.577" level="INFO">Typing text '089988665522' into text field '(//tr//input[@class="gwt-TextBox"])[3]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.576" endtime="20230623 12:42:02.661"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.662" level="INFO">Clicking element '(//tr//input[@class="gwt-TextBox"])[4]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.661" endtime="20230623 12:42:02.721"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[4]</arg>
+<arg>josua@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.724" level="INFO">Typing text 'josua@gmail.com' into text field '(//tr//input[@class="gwt-TextBox"])[4]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.723" endtime="20230623 12:42:02.812"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[5]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.813" level="INFO">Clicking element '(//tr//input[@class="gwt-TextBox"])[5]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.813" endtime="20230623 12:42:02.875"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[5]</arg>
+<arg>Jalan Lintas Sumatera</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.877" level="INFO">Typing text 'Jalan Lintas Sumatera' into text field '(//tr//input[@class="gwt-TextBox"])[5]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.876" endtime="20230623 12:42:02.974"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[7]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:02.975" level="INFO">Clicking element '(//tr//input[@class="gwt-TextBox"])[7]'.</msg>
+<status status="PASS" starttime="20230623 12:42:02.974" endtime="20230623 12:42:03.034"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//tr//input[@class="gwt-TextBox"])[7]</arg>
+<arg>www.gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:03.036" level="INFO">Typing text 'www.gmail.com' into text field '(//tr//input[@class="gwt-TextBox"])[7]'.</msg>
+<status status="PASS" starttime="20230623 12:42:03.035" endtime="20230623 12:42:03.119"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class="gwt-Button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:03.121" level="INFO">Clicking element '//button[@class="gwt-Button"]'.</msg>
+<status status="PASS" starttime="20230623 12:42:03.120" endtime="20230623 12:42:03.178"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//img[@class="gwt-Image"]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 12:42:03.179" endtime="20230623 12:42:03.961"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:[href="https://zxing.org/w/chart?cht=qr&amp;chs=350x350&amp;chld=L&amp;choe=UTF-8&amp;chl=MECARD%3AN%3AJosua+Simanjuntak%3BORG%3AAbc+Company%3BTEL%3A089988665522%3BURL%3Awww.gmail.com%3BEMAIL%3Ajosua%40gmail.com%3BADR%3AJalan+Lintas+Sumatera%3BNOTE%3ATitle+Abc%3B%3B"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:03.963" level="INFO">Clicking link 'css:[href="https://zxing.org/w/chart?cht=qr&amp;chs=350x350&amp;chld=L&amp;choe=UTF-8&amp;chl=MECARD%3AN%3AJosua+Simanjuntak%3BORG%3AAbc+Company%3BTEL%3A089988665522%3BURL%3Awww.gmail.com%3BEMAIL%3Ajosua%40gmail.com%3BADR%3AJalan+Lintas+Sumatera%3BNOTE%3ATitle+Abc%3B%3B"]'.</msg>
+<status status="PASS" starttime="20230623 12:42:03.962" endtime="20230623 12:42:04.744"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>//img[@src="https://zxing.org/w/chart?cht=qr&amp;chs=350x350&amp;chld=L&amp;choe=UTF-8&amp;chl=MECARD%3AN%3AJosua+Simanjuntak%3BORG%3AAbc+Company%3BTEL%3A089988665522%3BURL%3Awww.gmail.com%3BEMAIL%3Ajosua%40gmail.com%3BADR%3AJalan+Lintas+Sumatera%3BNOTE%3ATitle+Abc%3B%3B"]</arg>
+<arg>D:\\Selenium-Python\\Resources\\barcode-josua.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230623 12:42:04.873" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Resources/barcode-josua.png"&gt;&lt;img src="../Resources/barcode-josua.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230623 12:42:04.745" endtime="20230623 12:42:04.873"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230623 12:42:07.888" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230623 12:42:04.874" endtime="20230623 12:42:07.888"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://m28dev.github.io/qrdecoder/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230623 12:42:07.889" level="INFO">Opening url 'https://m28dev.github.io/qrdecoder/'</msg>
+<status status="PASS" starttime="20230623 12:42:07.889" endtime="20230623 12:42:08.282"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@id="qrcode"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230623 12:42:08.282" endtime="20230623 12:42:08.329"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>//input[@id="qrcode"]</arg>
+<arg>D:\\Selenium-Python\\Resources\\barcode-josua.png</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230623 12:42:08.330" level="INFO">Sending D:\Selenium-Python\Resources\barcode-josua.png to browser.</msg>
+<status status="PASS" starttime="20230623 12:42:08.330" endtime="20230623 12:42:08.375"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[contains(.,"Submit")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:08.376" level="INFO">Clicking element '//button[contains(.,"Submit")]'.</msg>
+<status status="PASS" starttime="20230623 12:42:08.376" endtime="20230623 12:42:08.439"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>//textarea[@id="decoded"][contains(.,"Now Loading...")]</arg>
+<arg>timeout=60s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230623 12:42:08.440" endtime="20230623 12:42:11.596"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${description}</var>
+<arg>//textarea[@id="decoded"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230623 12:42:11.627" level="INFO">${description} = MECARD:N:Josua Simanjuntak;ORG:Abc Company;TEL:089988665522;URL:www.gmail.com;EMAIL:josua@gmail.com;ADR:Jalan Lintas Sumatera;NOTE:Title Abc;;</msg>
+<status status="PASS" starttime="20230623 12:42:11.597" endtime="20230623 12:42:11.627"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${description}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230623 12:42:11.628" level="INFO">MECARD:N:Josua Simanjuntak;ORG:Abc Company;TEL:089988665522;URL:www.gmail.com;EMAIL:josua@gmail.com;ADR:Jalan Lintas Sumatera;NOTE:Title Abc;;</msg>
+<status status="PASS" starttime="20230623 12:42:11.627" endtime="20230623 12:42:11.628"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230623 12:42:16.641" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230623 12:42:11.628" endtime="20230623 12:42:16.641"/>
+</kw>
+<kw name="Remove Files" library="OperatingSystem">
+<arg>D:\\Selenium-Python\\Resources\\barcode-josua.png</arg>
+<doc>Uses `Remove File` to remove multiple files one-by-one.</doc>
+<msg timestamp="20230623 12:42:16.644" level="INFO" html="true">Removed file '&lt;a href="file://D:\Selenium-Python\Resources\barcode-josua.png"&gt;D:\Selenium-Python\Resources\barcode-josua.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20230623 12:42:16.643" endtime="20230623 12:42:16.644"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230623 12:42:16.646" endtime="20230623 12:42:18.873"/>
+</kw>
+<status status="PASS" starttime="20230623 12:41:57.616" endtime="20230623 12:42:18.874"/>
+</test>
+<status status="PASS" starttime="20230623 12:41:57.266" endtime="20230623 12:42:18.879"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation-Selenium-Python">Automation-Selenium-Python</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
